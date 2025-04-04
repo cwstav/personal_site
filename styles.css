@@ -43,7 +43,21 @@ h1 {
 }
 
 .highlight {
+  position: relative;
+  display: inline;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: 0;
+  bottom: 0;
   background: #90EE90;
-  padding: 0 4px;
-  border-radius: 2px;
+  z-index: -1;
+  transform: skew(-12deg) rotate(-2deg);
+  opacity: 0.7;
+  mask-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='4' stroke-dasharray='6, 14' stroke-dashoffset='0' stroke-linecap='round'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='4' stroke-dasharray='6, 14' stroke-dashoffset='0' stroke-linecap='round'/%3E%3C/svg%3E");
 }
